@@ -18,9 +18,8 @@ class DosesController < ApplicationController
   def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy
-
     # no need for app/views/cocktails/destroy.html.erb
-    redirect_to cocktails_path
+    redirect_to cocktails_path(@cocktail)
   end
 
   private
